@@ -1,6 +1,5 @@
-package com.technical_test.technicalFiverr;
+package com.technical_test.technicalFiverr.application;
 
-import com.technical_test.technicalFiverr.entities.UserEntity;
 import com.technical_test.technicalFiverr.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
