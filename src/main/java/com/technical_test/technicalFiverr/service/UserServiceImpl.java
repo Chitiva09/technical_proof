@@ -12,7 +12,7 @@ public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
 
-    public void setUserRepository(UserRepository userRepository) {
+    public void UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService {
 
     @Override//buscar por email
     public UserEntity findByEmailUser(String email) {
-        return null;
+        return userRepository.findByEmail(email);
     }
 
     @Override//Guardar nuevo contacto
@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
     @Override//Eliminar contacto
     public Boolean deleteByEmailUser(String email){
         if (userRepository.findByEmail(email)!=null){
-          userRepository.deleteById(email);
+          userRepository.deleteByEmail(email);
           return true;
         }
         return false;
